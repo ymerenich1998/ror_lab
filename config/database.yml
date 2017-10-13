@@ -20,6 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
+#production:
+ # <<: *default
+ # database: db/production.sqlite3
+
+  production:
   <<: *default
-  database: db/production.sqlite3
+  database: postgresql-opaque-67574_production
+  username: postgresql-opaque-67574
+  password: <%=ENC['MYAPP_DATABASE_PASSWORD'] %>
+ 
