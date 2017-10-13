@@ -28,5 +28,5 @@ test:
   <<: *default
   database: postgresql-opaque-67574_production
   username: postgresql-opaque-67574
-  password: <%=ENC['MYAPP_DATABASE_PASSWORD'] %>
+  password: <%=ENV['MYAPP_DATABASE_PASSWORD'] %>
  
