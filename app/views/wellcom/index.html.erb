@@ -1,0 +1,9 @@
+<% if @user == nil %>
+<p><%= link_to "Sign up", new_user_path %> | <%= link_to "Sign in", login_path %></p>
+<% else %>
+<p><%= link_to "Profile", user_path(@user.id)  %> | <%= link_to "Sign out", user_path(@user.id), method: :delete %></p>
+<% end %>
+
+
+<h1>Hello!</h1>
+<p>Please give me you dani</p>
