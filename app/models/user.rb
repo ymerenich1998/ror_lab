@@ -7,6 +7,6 @@ class User < ApplicationRecord
 	validates :gender, inclusion: %w(male female)
 	validates_format_of :phone, length: { in: 11 }, :with => /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/
 
-	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
+	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }#, default_url: "/images/:style/missing.png"
   	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end
