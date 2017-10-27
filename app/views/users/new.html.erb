@@ -36,7 +36,7 @@
   <%= f.text_field :phone %><br />
 
   <p><%= f.label "Age" %></p>
-  <%= f.text_field :age %><br />
+  <%= f.select :age, (0..99) %><br />
 
 <p><%= f.label "Country" %></p>
   <%= f.text_field :country %><br />
